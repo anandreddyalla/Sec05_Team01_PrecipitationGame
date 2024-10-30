@@ -1,0 +1,164 @@
+
+/* Import Google font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  background-image: url('https://img.freepik.com/premium-photo/screenshot-landscape-with-trees-wall-with-bird-flying-background_1271244-130477.jpg');
+  background-repeat: repeat;
+  object-fit: cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+html,body{
+    font-family: 'Raleway', sans-serif;
+    background-color: #fff;
+    line-height: 1.8;
+    color: #333;   
+}
+
+a{
+    color: #333;
+    text-decoration: none;
+}
+
+.btn{
+    display: inline-block;
+    font-size: 18px;
+    color: #fff;
+    background: #333;
+    padding: 13px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover{
+    color: #333;
+}
+
+footer{
+  text-align: center;
+}
+
+#container {
+  background: #fff;
+    margin: 20px auto;
+    width: 500px;
+    max-width: 900px;
+    padding: 40px;
+    border: 3px solid #000000;
+    border-radius: 8px;
+    box-shadow: 8.0px 16.0px 16.0px hsl(0deg 0% 0% / 0.25);
+  }
+
+  .form-wrap {
+    background: #fff;
+    padding: 20px;
+    color: #333;
+  }
+
+  .form-wrap .options {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .form-wrap .options .option {
+    background: rgb(167, 170, 180);
+    color: #333;
+    padding: 10px;
+    margin: 10px 0 10px 0;
+  }
+
+  .form-wrap .options .current {
+    background: #37a08e;
+    color: #fff;
+    padding: 10px;
+    margin: 10px 0 10px 0;
+  }
+
+  .form-wrap h1,
+  .form-wrap p {
+    text-align: center;
+    padding: 5px;
+  }
+
+  .form-wrap .form-group {
+    width: 100%;
+  }
+
+  .form-wrap .form-group label {
+    display: block;
+    color: #666;
+  }
+
+  .form-wrap .form-group select {
+    display: block;
+    color: #666;
+    width: 100%;
+    padding:12px;
+    margin-bottom:1rem;
+    margin-top: 10px;
+   
+  }
+
+  .form-wrap .form-group input {
+    width: 100%;
+    border: #344a72 1px solid;
+    padding: 12px;
+    border-radius: 8px;
+  }
+
+  .form-wrap button {
+    display: block;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    left: 38%;
+    background-color: #dbf26e;
+    background-image: linear-gradient(319deg, #dbf26e 0%, #61fa74 37%, #1cfdd6 100%);
+    padding: 10px 20px;
+    border-radius: 12px;
+    margin-top: 20px;
+    cursor: pointer;
+    color: #000000;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  .form-wrap button:hover {
+    background: #35eacc;
+  }
+
+  .form-wrap .bottom-text {
+    font-size: 13px;
+    margin-top: 20px;
+  }
+   h1{
+    color: #000000;
+    background-color: #dbf26e;
+    background-image: linear-gradient(49deg, #dbf26e 0%, #61fa74 37%, #1cfdd6 100%);
+    padding: 10px !important;
+    margin: 10px !important;
+    text-decoration: underline;
+   }
+
+
+
+
+
+
+
+
+
+
+
+
+

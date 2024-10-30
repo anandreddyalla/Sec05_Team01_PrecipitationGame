@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register Page</title>
+    <link rel="stylesheet" href="./css/authentication.css"/>
+  </head>
+  <body>   
+        <div id="container">
+        <div class="form-wrap">
+            <h1>Sign Up</h1>
+            
+            <form id="professor-register-form">
+                <div class="form-group">
+                    <label for="professorName">Name</label>
+                    <input type="text" name="professorName" id="professorName" />
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" />
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password" />
+                </div>
+                <div class="form-group">
+                    <label for="confirmpassword">Confirm Password</label>
+                    <input type="password" name="confirmpassword" id="confirmpassword" />
+                </div>
+                <button type="submit" class="btn">Register</button>
+            </form>
+        </div>
+        <footer>
+            <p>Already have an account? <a href="index.html">Login Here</a></p>
+        </footer>
+        </div>
+  </body>
+    <script src="./scripts/register.js"></script>
+</html>
