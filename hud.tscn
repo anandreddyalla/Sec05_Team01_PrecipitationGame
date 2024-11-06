@@ -1,0 +1,301 @@
+[gd_scene load_steps=22 format=3 uid="uid://coxtet87osx5h"]
+
+[ext_resource type="Script" path="res://pq/Scripts/hud.gd" id="1_1ka5f"]
+[ext_resource type="Script" path="res://pq/Scripts/dictonaryLogic.gd" id="2_eveou"]
+[ext_resource type="Theme" uid="uid://8k5cu77fnhnr" path="res://pq/HUD/flask_buttons.tres" id="3_lodc6"]
+[ext_resource type="Texture2D" uid="uid://b6jjqnwxrx6qy" path="res://pq/Assets/Heart.png" id="5_6ylvo"]
+[ext_resource type="Texture2D" uid="uid://che52yai5poi7" path="res://pq/Assets/Pause.png" id="6_kf4im"]
+[ext_resource type="Texture2D" uid="uid://dobemjowh6w3h" path="res://pq/Assets/Play.png" id="7_5d8xk"]
+[ext_resource type="Texture2D" uid="uid://cruwekyplwdg" path="res://pq/Assets/Help.png" id="8_e4ntm"]
+[ext_resource type="Texture2D" uid="uid://jj8kijxth13f" path="res://pq/Assets/solubility-chart.png" id="9_whe6f"]
+[ext_resource type="Texture2D" uid="uid://v2cf311wr38l" path="res://pq/Assets/Progress Bar.png" id="11_2v3lc"]
+[ext_resource type="FontFile" uid="uid://dhmgxrust5hrw" path="res://pq/HUD/BitFontMakrSporty.ttf" id="12_eoikg"]
+[ext_resource type="Script" path="res://pq/Scripts/TextboxScript.gd" id="13_iod6u"]
+[ext_resource type="Texture2D" uid="uid://bn4ser8ntbvaw" path="res://pq/Assets/Exit Button.png" id="14_12ov3"]
+[ext_resource type="PackedScene" uid="uid://bj4ftjkxrhpry" path="res://pq/Menu/test_world.tscn" id="14_wwqn7"]
+[ext_resource type="Theme" uid="uid://binb8tymyiycd" path="res://pq/Menu/mainMenu-button.tres" id="15_fr16m"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_xw4x5"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ibdl1"]
+bg_color = Color(0.00800417, 0.00538258, 0.00125689, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 0.988235, 0.988235, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vc5tt"]
+bg_color = Color(0.0666667, 0.439216, 0.372549, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_na3fh"]
+font_size = 26
+font_color = Color(0.00392157, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_57fhm"]
+font_size = 18
+font_color = Color(0.101961, 0.152941, 0.109804, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_13vpn"]
+font_size = 28
+
+[sub_resource type="LabelSettings" id="LabelSettings_7wreb"]
+font_size = 30
+
+[node name="HUD" type="CanvasLayer"]
+follow_viewport_enabled = true
+script = ExtResource("1_1ka5f")
+metadata/_edit_horizontal_guides_ = [-1.0]
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="ScienceScript" type="Node" parent="."]
+script = ExtResource("2_eveou")
+
+[node name="Flasks" type="Sprite2D" parent="."]
+
+[node name="FlaskHolder" type="GridContainer" parent="Flasks"]
+texture_filter = 1
+offset_left = 587.0
+offset_top = 246.0
+offset_right = 1131.0
+offset_bottom = 565.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/v_separation = 14
+
+[node name="Option1" type="Button" parent="Flasks/FlaskHolder"]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("3_lodc6")
+text = "Zn(NO3)2 (aq) + 2 NaOH (aq) → 2 NaNO3 (aq) + Zn(OH)2 (s)"
+autowrap_mode = 3
+icon_alignment = 2
+expand_icon = true
+text_direction = 1
+
+[node name="Option2" type="Button" parent="Flasks/FlaskHolder"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("3_lodc6")
+text = "H20"
+autowrap_mode = 3
+icon_alignment = 2
+expand_icon = true
+
+[node name="Option3" type="Button" parent="Flasks/FlaskHolder"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("3_lodc6")
+text = "H20"
+autowrap_mode = 3
+icon_alignment = 2
+expand_icon = true
+
+[node name="Health" type="CanvasLayer" parent="."]
+
+[node name="Heart" type="Sprite2D" parent="Health"]
+position = Vector2(903, 140)
+scale = Vector2(3.75, 4.07143)
+texture = ExtResource("5_6ylvo")
+
+[node name="Heart2" type="Sprite2D" parent="Health"]
+position = Vector2(1001, 140.616)
+scale = Vector2(3.75, 4.071)
+texture = ExtResource("5_6ylvo")
+
+[node name="Heart3" type="Sprite2D" parent="Health"]
+position = Vector2(1101, 140.616)
+scale = Vector2(3.75, 4.071)
+texture = ExtResource("5_6ylvo")
+
+[node name="PauseButton" type="TextureButton" parent="."]
+offset_left = 1040.0
+offset_top = 11.0
+offset_right = 1133.0
+offset_bottom = 90.0
+toggle_mode = true
+texture_normal = ExtResource("6_kf4im")
+texture_pressed = ExtResource("7_5d8xk")
+stretch_mode = 0
+
+[node name="HelpButton" type="TextureButton" parent="."]
+offset_left = 952.0
+offset_top = 12.0
+offset_right = 1031.0
+offset_bottom = 91.0
+toggle_mode = true
+texture_normal = ExtResource("8_e4ntm")
+texture_pressed = ExtResource("8_e4ntm")
+stretch_mode = 0
+
+[node name="SolubilityChart" type="Sprite2D" parent="HelpButton"]
+visible = false
+position = Vector2(-647, 291)
+scale = Vector2(0.519641, 0.520375)
+texture = ExtResource("9_whe6f")
+
+[node name="SolubilityKey" type="Sprite2D" parent="HelpButton"]
+visible = false
+position = Vector2(-790, 554)
+scale = Vector2(0.0482909, 0.0482909)
+texture = SubResource("CompressedTexture2D_xw4x5")
+
+[node name="ProgressBar" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(399, 59)
+scale = Vector2(16, 8)
+texture = ExtResource("11_2v3lc")
+hframes = 3
+vframes = 15
+
+[node name="Textbox" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="TextboxContainer" type="MarginContainer" parent="Textbox"]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 531.0
+offset_top = -65.0
+offset_right = -28.0
+offset_bottom = -27.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = -67
+theme_override_constants/margin_right = -16
+theme_override_constants/margin_bottom = -16
+
+[node name="Panel" type="Panel" parent="Textbox/TextboxContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ibdl1")
+
+[node name="MarginContainer" type="MarginContainer" parent="Textbox/TextboxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="Panel" type="Panel" parent="Textbox/TextboxContainer/MarginContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_vc5tt")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Textbox/TextboxContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="Start" type="Label" parent="Textbox/TextboxContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("12_eoikg")
+theme_override_font_sizes/font_size = 30
+text = "*"
+
+[node name="Label" type="Label" parent="Textbox/TextboxContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_fonts/font = ExtResource("12_eoikg")
+theme_override_font_sizes/font_size = 30
+text = "The placeholder text looks like this and it will cover and autowrap the container"
+autowrap_mode = 2
+clip_text = true
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="End" type="Label" parent="Textbox/TextboxContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_fonts/font = ExtResource("12_eoikg")
+theme_override_font_sizes/font_size = 30
+text = "v"
+
+[node name="TextboxScript" type="Node" parent="Textbox"]
+script = ExtResource("13_iod6u")
+
+[node name="ExitButton" type="TextureButton" parent="."]
+visible = false
+offset_left = 20.0
+offset_top = 13.0
+offset_right = 281.0
+offset_bottom = 129.0
+texture_normal = ExtResource("14_12ov3")
+stretch_mode = 0
+
+[node name="Retry" type="Label" parent="."]
+visible = false
+offset_left = 206.0
+offset_top = 213.0
+offset_right = 988.0
+offset_bottom = 296.0
+theme = ExtResource("15_fr16m")
+theme_override_font_sizes/font_size = 60
+text = "Sorry.. Try again next time!"
+
+[node name="score" type="Label" parent="."]
+offset_left = 858.0
+offset_top = 173.0
+offset_right = 977.0
+offset_bottom = 196.0
+scale = Vector2(3, 3)
+text = "Score: 0 / 0"
+
+[node name="Puddle" type="Label" parent="."]
+custom_minimum_size = Vector2(-2, 2)
+offset_left = 333.0
+offset_top = 497.0
+offset_right = 500.0
+offset_bottom = 533.0
+text = "Puddle"
+label_settings = SubResource("LabelSettings_na3fh")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="questionTextLabel" type="Label" parent="."]
+offset_left = 196.0
+offset_top = 15.0
+offset_right = 679.0
+offset_bottom = 179.0
+scale = Vector2(1.3, 1.3)
+text = "Question"
+label_settings = SubResource("LabelSettings_57fhm")
+autowrap_mode = 3
+
+[node name="Level" type="Label" parent="."]
+offset_left = 847.0
+offset_top = 17.0
+offset_right = 957.0
+offset_bottom = 58.0
+text = "Level: 1"
+label_settings = SubResource("LabelSettings_13vpn")
+autowrap_mode = 3
+
+[node name="questionLabel" type="Label" parent="."]
+offset_left = 887.0
+offset_top = 43.0
+offset_right = 946.0
+offset_bottom = 93.0
+text = "Q1"
+label_settings = SubResource("LabelSettings_7wreb")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ExitButton2" type="Sprite2D" parent="."]
+position = Vector2(81.3931, 34.073)
+scale = Vector2(4.3125, 4.64286)
+
+[node name="World" parent="." instance=ExtResource("14_wwqn7")]
+
+[connection signal="pressed" from="Flasks/FlaskHolder/Option1" to="." method="_on_chem_button_pressed" binds= [0]]
+[connection signal="pressed" from="Flasks/FlaskHolder/Option2" to="." method="_on_chem_button_pressed" binds= [1]]
+[connection signal="pressed" from="Flasks/FlaskHolder/Option3" to="." method="_on_chem_button_pressed" binds= [2]]
+[connection signal="toggled" from="PauseButton" to="." method="_on_pause_button_toggled"]
+[connection signal="toggled" from="HelpButton" to="." method="_on_help_button_toggled"]
+[connection signal="pressed" from="ExitButton" to="." method="_on_exit_button_pressed"]
